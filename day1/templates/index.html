@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%if content%}
+        <h1>This is a new index file.Welcome {{content}}</h1>
+
+    {% else %}
+        <h1>This is a new index file.Welcome user</h1>
+    {% endif %}
+    
+    {% for i in range(10) %}
+        {% if i%2!=0 %}
+            <p>{{i}}</p>
+        {% endif %}
+        
+    {% endfor %}
+    <p>The names in the list are:</p>
+    {% for nam in namer%}
+        
+        <p>{{nam}}</p>
+    {% endfor %}
+    {% for nam in namer%}
+        {%if nam=='chandan'%}
+            <p>{{nam}},your maths marks is 25</p>
+        {%elif nam=='ashik'%}
+        <p>{{nam}},your science marks is 25</p>
+        {%elif nam=='praveen'%}
+        <p>{{nam}},your coding marks is 25</p>
+        {%endif%}
+    {% endfor %}
+</body>
+</html>
