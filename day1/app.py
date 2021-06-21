@@ -2,7 +2,7 @@ from flask import Flask, redirect, url_for
 
 
 app = Flask(__name__)
-#condition declaation
+#condition declaration
 a = False
 
 @app.route('/')
