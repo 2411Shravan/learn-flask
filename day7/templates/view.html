@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Users-View{% endblock %}
+
+
+
+{% block message %}
+    {% for value in values%}
+        <h6>{{value.name}}</h6>
+        <h6>{{value.email}}</h6>
+    {% endfor %}
+
+{% endblock %}
